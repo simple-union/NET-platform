@@ -1,0 +1,18 @@
+---
+version: "3.7"
+
+services:
+  postgresql:
+    image: "bitnami/postgresql:latest"
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRESQL_USERNAME=user
+      - POSTGRESQL_PASSWORD=password
+      - POSTGRESQL_DATABASE=postgresql
+    networks:
+      - NET-platform-data-postgresql
+
+networks:
+  NET-platform-data-postgresql:
+    driver: bridge
