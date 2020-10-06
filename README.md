@@ -20,7 +20,7 @@
   > solutions binary result (ignored by default)
 
 ## Requirements
-* C# 7.3 minimal
+* C# 8.0 minimal
 * Microsoft NET Framework SDK 4.7 - 4.8
 * Microsoft NET Core SDK 2.1, 3.1
 * MSBuild 16.5+

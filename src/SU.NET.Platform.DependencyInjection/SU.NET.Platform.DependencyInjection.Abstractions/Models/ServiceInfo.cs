@@ -3,7 +3,7 @@
 using JetBrains.Annotations;
 
 
-namespace SU.NET.Platform.DependencyInjection.Models
+namespace SU.NET.Platform.DependencyInjection.Abstractions.Models
 {
     /// <summary>
     /// Service info.

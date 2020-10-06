@@ -9,9 +9,9 @@
     </PropertyGroup>
     <!-- Properties - common -->
     <PropertyGroup>
-        <LangVersion>7.3</LangVersion>
+        <LangVersion>8.0</LangVersion>
         <TargetFrameworks>netstandard2.0;netstandard2.1;net47;net471;net472;net48;netcoreapp2.1;netcoreapp3.1</TargetFrameworks>
-        <Name>SU.NET.Platform.DependencyInjection</Name>
+        <Name>SU.NET.Platform.DependencyInjection.Abstractions</Name>
         <Version>$(LibraryVersion)</Version>
         <VersionSuffix>$(LibraryVersionSuffix)</VersionSuffix>
         <FileVersion>$(Version)</FileVersion>
@@ -19,7 +19,7 @@
         <Authors>NET Platform Team</Authors>
         <Company>Simple-Union</Company>
         <Description>
-            Platform dependency injection library
+            Platform dependency injection abstractions
             Part of $(Company) platform framework v$(FrameworkVersion)
         </Description>
         <Copyright>Copyright © $(Company) $(CurrentYear)</Copyright>
@@ -30,20 +30,23 @@
         <IsPackable>true</IsPackable>
         <PackageId>$(Name)</PackageId>
         <PackageVersion>$(Version)</PackageVersion>
-        <PackageVersion Condition="'$(VersionSuffix)' != ''">$(Version)-$(VersionSuffix)</PackageVersion>
+        <PackageVersion Condition="'$(VersionSuffix.Trim())' != ''">$(Version)-$(VersionSuffix)</PackageVersion>
         <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     </PropertyGroup>
     <!-- NuGet packages -->
     <!-- NuGet packages - common -->
     <ItemGroup>
-        <PackageReference Include="Vsxmd" Version="1.4.5" />
-        <PackageReference Include="JetBrains.Annotations" Version="2019.1.3" />
-        <PackageReference Include="SimpleInjector" Version="4.9.0" />
+        <PackageReference Include="Vsxmd" Version="1.4.2" />
+        <PackageReference Include="JetBrains.Annotations" Version="2020.1.0" />
     </ItemGroup>
     <!-- NuGet packages for .NET Standard -->
     <!-- Condition="'$(TargetFramework)' == 'netstandard2.0' OR '$(TargetFramework)' == 'netstandard2.1'" -->
+    <ItemGroup>
+    </ItemGroup>
     <!-- NuGet packages for .NET Framework -->
     <!-- Condition="'$(TargetFramework)' == 'net47' OR '$(TargetFramework)' == 'net471' OR '$(TargetFramework)' == 'net472' OR '$(TargetFramework)' == 'net48'" -->
+    <ItemGroup>
+    </ItemGroup>
     <!-- NuGet packages for .NET Core -->
     <!-- Condition="'$(TargetFramework)' == 'netcoreapp2.1' OR '$(TargetFramework)' == 'netcoreapp3.1'" -->
     <ItemGroup>

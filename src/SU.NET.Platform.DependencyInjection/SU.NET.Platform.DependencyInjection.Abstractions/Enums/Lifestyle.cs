@@ -1,4 +1,4 @@
-﻿namespace SU.NET.Platform.DependencyInjection.Enums
+﻿namespace SU.NET.Platform.DependencyInjection.Abstractions.Enums
 {
     /// <summary>
     /// Lifestyle.
